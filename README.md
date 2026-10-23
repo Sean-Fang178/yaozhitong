@@ -61,11 +61,13 @@
 
 ### 7. 實作過程
 
-跟 AI（Claude）反覆討論需求，再用 Vibe Coding 一步一步做出來。開發時用 Playwright 自動化測試跑了三輪，抓到 26 個問題後逐一修正，例如：
+先請 AI 規劃使用流程，我修改後定成規格，再用 Vibe Coding 一步一步做出來。我負責操作、挑毛病、下修改指令，AI 負責改程式。開發時用 Playwright 自動化測試跑了三輪，抓到 26 個問題後逐一修正，例如：
 
 - 不喝酒的人被當成「偶爾飲酒」→ 飲酒改成「否／偶爾／經常」三個選項
 - 抽菸、檳榔的數量原本是自由輸入 → 改成區間下拉選單
 - 調查表的選項在窄螢幕會斷行 → 縮窄數量下拉選單
+
+**每一輪我下了什麼指令、AI 改了什麼，整理在 [DEVLOG.md](DEVLOG.md)**（9/4～9/6 60 多則指令、37 個 commit，共 6 輪）。
 
 完整的測試紀錄（每個問題怎麼發現、怎麼處理）見 [TEST-FINDINGS.md](https://github.com/Sean-Fang178/yaozhitong-web-demo/blob/main/docs/TEST-FINDINGS.md)。
 
