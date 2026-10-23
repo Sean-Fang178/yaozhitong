@@ -2490,7 +2490,7 @@ window.DRUG_DATA = {
     render() {
       const passed = state.quiz.passed; if (passed) ensureDoses();
       const remainingDrugs = state.drugs.filter((e) => !drugStatus(e.licenseNo).done).length; const items = quizItems();
-      const quizNote = passed ? `已通過 ${items.length} / ${items.length}，提醒已排定` : quizUnlocked() ? `${state.drugs.length} 款藥與交互作用都確認了，可以開始` : `還要先確認 ${remainingDrugs} 款藥的說明${interactionsDone() ? '' : '與交互作用'}`;
+      const quizNote = passed ? `已通過 ${items.length} / ${items.length}，提醒已排定` : quizUnlocked() ? `${state.drugs.length} 款藥與交互作用都確認了，可以開始` : (remainingDrugs ? `還要先確認 ${remainingDrugs} 款藥的說明${interactionsDone() ? '' : '與交互作用'}` : '還要先確認交互作用');
       return `
       ${passed ? `<div class="card">
         <div style="display:flex;align-items:center;gap:.6rem;flex-wrap:wrap"><h2 style="flex:1">今天要吃的藥</h2><button class="btn btn-small" id="simulate-due">模擬時間到</button></div>

@@ -67,6 +67,8 @@
 - 抽菸、檳榔的數量原本是自由輸入 → 改成區間下拉選單
 - 調查表的選項在窄螢幕會斷行 → 縮窄數量下拉選單
 
+完整的測試紀錄（每個問題怎麼發現、怎麼處理）見 [TEST-FINDINGS.md](https://github.com/Sean-Fang178/yaozhitong-web-demo/blob/main/docs/TEST-FINDINGS.md)。
+
 ## 授權
 
 Apache License 2.0，見 [`LICENSE`](LICENSE)。
