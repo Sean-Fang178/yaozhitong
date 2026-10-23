@@ -9,9 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@400;700&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%276%27 fill=%27%230f6e56%27/%3E%3Ctext x=%2716%27 y=%2722%27 font-size=%2718%27 text-anchor=%27middle%27 fill=%27white%27 font-family=%27sans-serif%27%3E%E8%97%A5%3C/text%3E%3C/svg%3E">
   <style>
-/* 藥智通 網頁示範版
-   設計前提：主要讀者是 68 歲的長者。基礎字級 18px、行高 1.7、對比高、
-   每個元素一個目的一個動作。強調色只有一個（深青綠），警示用琥珀，嚴重用磚紅。 */
 
 :root {
   --ink: #1d2422;
@@ -59,7 +56,6 @@ button { font: inherit; cursor: pointer; }
 input, select, textarea { font: inherit; color: inherit; }
 [hidden] { display: none !important; }
 
-/* 版面 */
 .topbar { background: transparent; }
 .topbar-inner {
   max-width: var(--shell); margin: 0 auto; padding: 0.7rem 1rem 0;
@@ -128,7 +124,6 @@ main { max-width: var(--shell); margin: 0 auto; padding: 1rem 1rem 3rem; }
 .page-title { margin-bottom: 0.25rem; }
 .page-lead { color: var(--ink-2); margin-bottom: 1.25rem; }
 
-/* 按鈕：只有主按鈕有底色，其餘只有邊線 */
 .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem;
   border: 1px solid var(--line); background: var(--paper); color: var(--ink);
@@ -144,7 +139,6 @@ main { max-width: var(--shell); margin: 0 auto; padding: 1rem 1rem 3rem; }
 .btn-text:hover { background: var(--accent-soft); }
 .btn-small { padding: 0.3rem 0.7rem; font-size: 0.88rem; }
 
-/* 區塊 */
 .card {
   background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius-m);
   padding: 1.1rem 1.25rem; margin-bottom: 1rem;
@@ -153,7 +147,6 @@ main { max-width: var(--shell); margin: 0 auto; padding: 1rem 1rem 3rem; }
 .section-label { font-size: 0.8rem; color: var(--ink-3); letter-spacing: 0.04em; margin-bottom: 0.3rem; }
 .divider { border: 0; border-top: 1px solid var(--line-2); margin: 1rem 0; }
 
-/* 表單 */
 fieldset { border: 0; padding: 0; margin: 0 0 1.4rem; min-width: 0; }
 legend { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem; padding: 0; margin-bottom: 0.6rem; border-left: 4px solid var(--accent); padding-left: 0.6rem; }
 .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 0.6rem 1rem; }
@@ -179,7 +172,6 @@ legend { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem;
 .staff-only legend { border-left-color: var(--line); color: var(--ink-3); }
 .form-prefilled { font-size: 0.85rem; color: var(--ink-2); background: var(--accent-soft); border-radius: var(--radius-s); padding: 0.5rem 0.8rem; margin-bottom: 1rem; }
 
-/* 上傳示意 */
 .dropzone {
   border: 2px dashed var(--line); border-radius: var(--radius-m); padding: 2rem 1rem;
   text-align: center; color: var(--ink-2); background: var(--paper);
@@ -197,7 +189,6 @@ legend { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem;
 .tips { font-size: 0.88rem; color: var(--ink-2); }
 .tips li { margin-bottom: 0.2rem; }
 
-/* 確認頁 */
 .med-card { border: 1px solid var(--line); border-radius: var(--radius-m); padding: 1rem 1.1rem; margin-bottom: 0.9rem; background: var(--paper); }
 .med-card.is-confirmed { border-color: var(--accent); }
 .med-head { display: flex; align-items: flex-start; gap: 0.6rem; flex-wrap: wrap; }
@@ -217,7 +208,6 @@ legend { font-family: var(--font-display); font-weight: 600; font-size: 1.15rem;
 .pending-box .choice-row { margin-top: 0.3rem; }
 .med-actions { display: flex; gap: 0.5rem; margin-top: 0.8rem; flex-wrap: wrap; }
 
-/* 講白話 */
 .drug-hero { margin-bottom: 1rem; }
 .drug-hero .med-name { font-size: 1.5rem; }
 .drug-meta { color: var(--ink-2); font-size: 0.9rem; }
@@ -267,7 +257,6 @@ mark { background: #ffe9a3; color: inherit; padding: 0 0.15em; border-radius: 3p
 .followup-alert { margin-top: 0.5rem; padding: 0.55rem 0.8rem; background: var(--amber-soft); border-radius: var(--radius-s); font-size: 0.92rem; }
 .followup.is-unanswered { background: var(--amber-soft); margin: 0 -0.5rem; padding-left: 0.5rem; padding-right: 0.5rem; }
 
-/* 交互作用 */
 .pair-card { border: 1px solid var(--line); border-radius: var(--radius-m); padding: 1rem 1.1rem; margin-bottom: 0.9rem; background: var(--paper); }
 .pair-names { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
 .sev { display: inline-block; font-size: 0.8rem; padding: 0.1rem 0.6rem; border-radius: 999px; margin-left: 0.4rem; vertical-align: 3px; }
@@ -280,7 +269,6 @@ mark { background: #ffe9a3; color: inherit; padding: 0 0.15em; border-radius: 3p
 .evidence .who { font-size: 0.8rem; color: var(--ink-3); margin-top: 0.4rem; }
 .honest { color: var(--ink-2); font-size: 0.92rem; }
 
-/* 測驗 */
 .quiz-q { border-top: 1px solid var(--line-2); padding: 0.9rem 0; }
 .quiz-q:first-child { border-top: 0; }
 .quiz-q .q-title { font-weight: 500; }
@@ -295,7 +283,6 @@ mark { background: #ffe9a3; color: inherit; padding: 0 0.15em; border-radius: 3p
 .quiz-result[data-pass="false"] { background: var(--brick-soft); color: var(--brick); }
 .score { font-family: var(--font-display); font-size: 1.6rem; font-weight: 600; }
 
-/* 提醒與打卡 */
 .dose-row { display: grid; grid-template-columns: 4.2rem 1fr auto; gap: 0.6rem; align-items: center; padding: 0.7rem 0; border-top: 1px solid var(--line-2); }
 .dose-row:first-child { border-top: 0; }
 .dose-time { font-family: var(--font-display); font-size: 1.15rem; font-weight: 600; }
@@ -320,7 +307,6 @@ mark { background: #ffe9a3; color: inherit; padding: 0 0.15em; border-radius: 3p
 .slot-row { display: flex; align-items: center; gap: 0.6rem; padding: 0.35rem 0; }
 .slot-row input[type="time"] { border: 1px solid var(--line); border-radius: var(--radius-s); padding: 0.25rem 0.4rem; }
 
-/* 報表 */
 .big-stat { display: flex; align-items: baseline; gap: 0.6rem; }
 .big-stat .n { font-family: var(--font-display); font-size: 2.6rem; font-weight: 600; line-height: 1; }
 .big-stat .l { color: var(--ink-2); }
@@ -338,7 +324,6 @@ mark { background: #ffe9a3; color: inherit; padding: 0 0.15em; border-radius: 3p
 .week-grid .cell[data-s="pending"] { background: var(--paper); border: 1px dashed var(--line); }
 .week-grid .rowlabel { align-self: center; }
 
-/* 藥箱 */
 .cab-item { display: grid; grid-template-columns: 1fr auto; gap: 0.5rem; padding: 0.8rem 0; border-top: 1px solid var(--line-2); align-items: start; }
 .cab-item:first-child { border-top: 0; }
 .cab-name { font-weight: 500; }
@@ -353,7 +338,6 @@ mark { background: #ffe9a3; color: inherit; padding: 0 0.15em; border-radius: 3p
 .dont-list { padding-left: 1.3rem; color: var(--brick); }
 .dont-list li { margin-bottom: 0.3rem; }
 
-/* 家人照護 */
 .rel-row { display: flex; align-items: center; gap: 0.7rem; padding: 0.6rem 0; border-top: 1px solid var(--line-2); flex-wrap: wrap; }
 .rel-row:first-child { border-top: 0; }
 .rel-name { font-weight: 500; }
@@ -367,7 +351,6 @@ mark { background: #ffe9a3; color: inherit; padding: 0 0.15em; border-radius: 3p
 .notif-demo .n-app { font-size: 0.75rem; opacity: 0.7; }
 .invite-code { font-family: "Courier New", monospace; font-size: 1.6rem; letter-spacing: 0.15em; margin: 0.3rem 0; }
 
-/* 問答 */
 .chat-log { display: flex; flex-direction: column; gap: 0.7rem; margin-bottom: 1rem; }
 .msg { max-width: 92%; padding: 0.65rem 0.9rem; border-radius: var(--radius-m); }
 .msg-user { align-self: flex-end; background: var(--ink); color: var(--paper); }
@@ -407,7 +390,6 @@ mark { background: #ffe9a3; color: inherit; padding: 0 0.15em; border-radius: 3p
   .week-grid { grid-template-columns: 3.6rem repeat(7, 1fr); }
 }
 
-/* 新增藥品（真實辨識與搜尋） */
 label.btn { display: inline-flex; align-items: center; cursor: pointer; }
 .bag-photo { max-width: 100%; max-height: 320px; border-radius: var(--radius-s); display: block; margin: 0 auto 0.5rem; }
 .search-row { display: flex; gap: 0.5rem; align-items: stretch; flex-wrap: wrap; }
@@ -422,7 +404,6 @@ label.btn { display: inline-flex; align-items: center; cursor: pointer; }
 .progress-card .steps-list li[data-s="fail"] { color: var(--brick); }
 .caregiver-entry { margin-top: 1.2rem; text-align: center; }
 
-/* 交互作用與問答：仿單 vs AI 補充 */
 .tag-ai { background: var(--amber-soft); color: var(--amber); border-color: var(--amber); margin-left: 0.4rem; }
 .ai-note { font-size: 0.85rem; color: var(--amber); }
 .src-block { margin-top: 0.6rem; padding: 0.5rem 0.7rem; border-radius: var(--radius-s); font-size: 0.9rem; }
@@ -468,8 +449,6 @@ label.btn { display: inline-flex; align-items: center; cursor: pointer; }
 
 
   <script>
-// 由本機 med-proxy 資料庫（plain_language_cache、leaflet_chunk、drug_master）匯出，2026-09-04。
-// 三款藥的白話說明為 Claude Opus 5 依食藥署公開仿單產生，仿單條文為原文節錄。
 window.DRUG_DATA = {
  "drugs": [
   {
@@ -985,16 +964,13 @@ window.DRUG_DATA = {
 
 </script>
   <script>
-// 示範資料：王大明先生（虛構人物）。藥品資料是真的（見 drug-data.js），
-// 個人資料、服藥紀錄、藥箱與家人是為了 demo 預先填好的。
 (function () {
   const LIC = {
-    glimet: '衛部藥製字第058071號', // 利控糖（glimepiride + metformin）
-    coam: '衛部藥製字第059395號',   // 可得寧（amlodipine + benazepril）
-    tinten: '內衛藥製字第002676號', // 鎮定錠（acetaminophen）
+    glimet: '衛部藥製字第058071號',
+    coam: '衛部藥製字第059395號',
+    tinten: '內衛藥製字第002676號',
   };
 
-  // ── 一、健康調查表（預填） ──────────────────────────────────────
   const profile = {
     name: '王大明', sex: 'male', birth: { y: 1958, m: 3, d: 12 }, height: 168, weight: 72, phone: '0912-345-678',
     job: '退休',
@@ -1004,7 +980,7 @@ window.DRUG_DATA = {
     surgery: 'no', surgeryDetail: '', surgeryNote: '',
     family: 'yes', familyItems: { hypertension: '父親', diabetes: '', cancer: '', stroke: '', heart: '', mental: '', other: '' }, familyOtherName: '',
     otcMeds: null, otcMedsDetail: '',
-    smoking: 'quit', smokingPerDay: '', alcohol: 'occasional', alcoholPerWeek: '', betel: 'no', betelPerDay: '',  // 抽菸／檳榔：no 否、quit 已戒、yes 有；數量用下拉的區間
+    smoking: 'quit', smokingPerDay: '', alcohol: 'occasional', alcoholPerWeek: '', betel: 'no', betelPerDay: '',
     exercise: '1-2', sleep: 'good', diet: 'salty',
     exposure: ['none'], exposureOther: '',
     symptoms: ['none'], mental: 'stable', stress: 3,
@@ -1020,7 +996,6 @@ window.DRUG_DATA = {
   ];
   const chronicLabel = Object.fromEntries(chronicOptions);
 
-  // ── 二、上傳藥袋（示意）與辨識結果 ──────────────────────────────
   const recognition = {
     bag: {
       hospital: '新竹市立醫院 家庭醫學科', date: '115/08/28', patient: '王大明 先生',
@@ -1036,15 +1011,9 @@ window.DRUG_DATA = {
       { licenseNo: LIC.coam, raw: 'Co-Amndiline F.C. Tab 5/10mg 1 TAB QD', dose: '1 錠', freq: '一天一次', freqRaw: 'QD', timing: '', route: '口服', days: 28, confidence: { freq: 0.97 } },
       { licenseNo: LIC.tinten, raw: 'Tinten Tab 250mg 1 TAB Q6H PRN', dose: '1 錠', freq: '需要時服用', freqRaw: 'Q6H PRN', timing: '', note: '每 4 到 6 小時一次，一天最多 4 次', route: '口服', days: 5, confidence: { freq: 0.95 } },
     ],
-    // 從調查表帶入的藥：目前沒有（調查表「成藥」一題留白）
     fromForm: [],
   };
 
-  // ── 四、講白話：每一條禁忌／留意／族群的標籤（用來做個人化篩選） ──
-  // 標籤語意：pregnancy 懷孕、lactation 哺乳、child 兒童、elderly 長者、
-  // kidney 腎、liver 肝、diabetes 糖尿病、hypertension 高血壓、alcohol 飲酒、
-  // diet 飲食、g6pd 蠶豆症、thyroid 甲狀腺、heart 心臟、immune 免疫、
-  // allergy 過敏、contrast 顯影劑、surgery 手術、general 一般
   const tags = {
     [LIC.glimet]: {
       contraindications: [['general'], ['allergy'], ['liver', 'kidney'], ['pregnancy', 'lactation'], ['kidney'], ['contrast'], ['surgery'], ['general'], ['liver', 'alcohol'], ['heart']],
@@ -1063,7 +1032,6 @@ window.DRUG_DATA = {
     },
   };
 
-  // 由個人資料推導出「與我有關」的標籤，以及要略過的標籤
   function deriveProfileTags(p) {
     const related = new Set();
     if (p.age >= 65) related.add('elderly');
@@ -1087,7 +1055,6 @@ window.DRUG_DATA = {
 
   const skipReason = { pregnancy: '懷孕相關', lactation: '哺乳相關', child: '兒童劑量與兒童相關' };
 
-  // ── 進一步確認（每款藥的追問，預設已作答） ─────────────────────
   const followups = {
     [LIC.glimet]: [
       { id: 'kidney', q: '您是否有腎臟疾病，或最近抽血被告知腎功能下降？', hint: (p) => `依您的調查表：${p.chronic.includes('kidney') ? '有勾選腎臟疾病' : '未勾選腎臟疾病'}`, answer: 'no',
@@ -1115,7 +1082,6 @@ window.DRUG_DATA = {
     ],
   };
 
-  // ── 交互作用（三款藥兩兩比對） ──────────────────────────────────
   const interactions = [
     {
       a: LIC.glimet, b: LIC.coam, severity: 'moderate',
@@ -1145,13 +1111,11 @@ window.DRUG_DATA = {
     },
   ];
 
-  // 非藥物之間的共同提醒（依個人資料）
   const crossNotes = [
     { key: 'alcohol', text: '您填了飲酒「偶爾」。利控糖與鎮定錠的仿單都提到酒精：前者會增加乳酸中毒與低血糖風險，後者與肝臟損害有關。吃藥期間請避免飲酒，空腹更不要喝。', drugs: [LIC.glimet, LIC.tinten] },
     { key: 'duplicate', text: '成分重複檢查：三款藥的成分（glimepiride、metformin、amlodipine、benazepril、acetaminophen）彼此沒有重複。但家庭藥箱裡的「綜合感冒液」與鎮定錠都含 acetaminophen。', drugs: [LIC.tinten] },
   ];
 
-  // ── 五、小測驗（預設已選正確答案） ────────────────────────────
   const quiz = [
     { drug: LIC.glimet, q: '利控糖應該什麼時候吃？', options: ['一天一次或兩次，在飯前或隨餐服用', '睡前空腹吃', '只有覺得血糖高的時候才吃'], answer: 0,
       explain: '仿單：一天服用一次或兩次，在飯前或隨餐服用。您的藥袋寫的是每天一次、飯前。' },
@@ -1173,14 +1137,12 @@ window.DRUG_DATA = {
       explain: '劑量調整屬於個人化的醫療判斷。仿單：劑量會依照您血液中葡萄糖的濃度由醫師調整。' },
   ];
 
-  // ── 六、提醒與打卡（示意） ──────────────────────────────────────
   const schedule = [
     { licenseNo: LIC.glimet, slots: ['07:30'], label: '早餐前', note: '一天一次，飯前' },
     { licenseNo: LIC.coam, slots: ['08:00'], label: '早餐後', note: '一天一次' },
     { licenseNo: LIC.tinten, slots: [], prn: true, note: '需要時服用，一天最多 4 次' },
   ];
 
-  // 過去一週（2026-08-29 到 2026-09-04）的打卡紀錄；t 已服用、m 漏服、p 尚未回應（今天）
   const weekLogs = {
     days: ['8/29', '8/30', '8/31', '9/1', '9/2', '9/3', '9/4'],
     rows: [
@@ -1190,7 +1152,6 @@ window.DRUG_DATA = {
     prnCount: 1,
   };
 
-  // ── 八、家庭藥箱 ────────────────────────────────────────────────
   const cabinet = [
     { licenseNo: LIC.glimet, expiry: '2027-03-31', qty: 24, unit: '錠', place: '餐桌藥盒', purpose: '糖尿病', prescribed: '2026-08-28' },
     { licenseNo: LIC.coam, expiry: '2027-01-31', qty: 24, unit: '錠', place: '餐桌藥盒', purpose: '高血壓', prescribed: '2026-08-28' },
@@ -1198,16 +1159,12 @@ window.DRUG_DATA = {
     { name: '綜合感冒液（家裡剩的）', ingredients: ['ACETAMINOPHEN', 'CHLORPHENIRAMINE'], expiry: '2026-05-31', qty: 1, unit: '瓶', place: '浴室櫃子', purpose: '去年感冒', prescribed: '2025-12-03', expired: true },
   ];
 
-  // ── 九、家人照護（示意） ────────────────────────────────────────
   const care = {
     caregivers: [{ name: '王小美（女兒）', phone: '0922-333-444', perm: 'edit', permLabel: '可以檢視並協助修改' }],
     inviteCode: 'K7Q4-M2XF',
     missedThreshold: 2,
   };
 
-  // ── 十、用藥問答（依關鍵字比對的規則引擎） ──────────────────────
-  // 每條規則：keys 命中任一即採用；answer 可為字串或函式；basis 標示答案來源；
-  // refuse 表示越界拒答（劑量調整、停藥、換藥、診斷、他人用藥）。
   const qaRules = [
     { keys: ['減半', '減量', '減少', '少吃一點', '停藥', '停掉', '不吃了', '換藥', '改吃', '加量', '多吃', '兩顆'], refuse: true,
       answer: '這個問題涉及調整劑量或停藥，屬於需要看您整體狀況的醫療判斷，我不能替您決定。請把想法告訴醫師或藥師，由他們評估。\n\n可以告訴您仿單怎麼寫：利控糖的劑量「會依照您血液中葡萄糖的濃度來調整」；可得寧「請依醫師指示服用」。在醫師改處方之前，請照藥袋上的方式吃。', basis: ['越界提問', LIC.glimet, LIC.coam] },
@@ -1244,7 +1201,6 @@ window.DRUG_DATA = {
       answer: '這些藥是依您的狀況開的，我不能替其他人判斷能不能吃。利控糖和可得寧都是處方藥，仿單載明須由醫師處方使用；鎮定錠雖是指示藥，也不建議未滿 3 歲的幼兒自行使用。請他本人去問醫師或藥師。', basis: ['越界提問', LIC.glimet, LIC.coam, LIC.tinten] },
   ];
   const qaFallback = '我在三份仿單裡找不到和這個問題直接相關的記載，所以不能替您回答。可以拿著藥袋直接問藥師，或換個方式問我，例如「可以配酒嗎」「什麼時候吃」「有什麼副作用」。';
-  // 之前的對話（示範用），新的在前；每則對話可以有好幾題
   const qaHistory = [
     { date: '9/3 12:05', qs: ['低鈉鹽可以用嗎？'] },
     { date: '9/1 07:40', qs: ['早上忘記吃利控糖怎麼辦？', '我可以自己把利控糖減半嗎？'] },
@@ -1253,8 +1209,6 @@ window.DRUG_DATA = {
   const quickQuestions = ['吃完這個藥可以吃鳳梨嗎？', '晚上可以喝一杯啤酒嗎？', '早上忘記吃利控糖怎麼辦？', '我可以自己把利控糖減半嗎？', '低鈉鹽可以用嗎？'];
 
 
-  // ── 講白話：小學生也聽得懂的版本（**…** 是要螢光標記的重點） ──────
-  // 內容依上面 drug-data.js 的仿單整理改寫，只換說法、不加仿單沒有的事；原版仍會收在「看完整一點的說法」裡。
   const plainKid = {
     [LIC.glimet]: {
       plainWhatIsIt: '這是一顆**幫你把血糖降下來**的藥。裡面有兩種成分：一種叫 glimepiride，會**叫身體多放一些胰島素出來**（胰島素是把血糖搬走的小幫手）；另一種叫 metformin，會**幫身體把血糖用掉**。兩種一起用，血糖比較不會太高。它是**處方藥**，一定要醫師開才能吃。',
@@ -1357,21 +1311,15 @@ window.DRUG_DATA = {
 
 </script>
   <script>
-// 藥智通 網頁示範版 — 流程邏輯
-// 導覽跟 App 一樣：調查表→辨識→確認→首頁；首頁點藥品進說明、點卡片進交互作用與測驗，
-// 其餘功能在右上角「更多功能」。每一頁有自己的 render、bind、gate；底部動作列的按鈕由 ACTIONS 決定。
-//
-// 資料分兩層：預載的三款藥（drug-data.js + demo-data.js）與使用者之後新增的藥（走 /api，真實仿單 + AI 生成）。
-// 兩者進到 state.drugs 之後長得一樣，頁面不分辨來源。所有狀態存在 localStorage，重新整理不會消失。
 (function () {
   const D = window.DEMO;
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
   const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-  const hl = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<mark>$1</mark>').replace(/\*\*/g, ''); // **重點** → 螢光標記
+  const hl = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<mark>$1</mark>').replace(/\*\*/g, '');
   const SECTION_LABEL = { indication: '適應症', dosage: '用法用量', contraindication: '禁忌', precaution: '注意事項', interactions: '交互作用', side_effects: '不良反應', special_population: '特殊族群' };
   const CAT_TAG = (cat) => (cat || '').includes('處方') ? '<span class="tag tag-rx">處方藥</span>' : (cat || '').includes('指示') ? '<span class="tag tag-otc">指示藥</span>' : '<span class="tag">成藥</span>';
-  const TODAY = new Date(2026, 8, 4); // demo 固定在 2026-09-04
+  const TODAY = new Date(2026, 8, 4);
   const pad2 = (n) => String(n).padStart(2, '0');
   const isoDate = (d) => `${d.getFullYear()}-${pad2(d.getMonth() + 1)}-${pad2(d.getDate())}`;
   const birthISO = (b) => `${b.y}-${pad2(b.m)}-${pad2(b.d)}`;
@@ -1385,7 +1333,6 @@ window.DRUG_DATA = {
   const GROUPS = ['contraindications', 'dietConflicts', 'populationWarnings'];
   const STORE_KEY = 'yzt-demo-v2';
 
-  // ── 伺服器（有就用真的，沒有就退回預載資料）─────────────────────
   const cfg = { ai: false, medProxy: false, care: false, db: false, online: false };
   async function api(path, { method = 'GET', body, token } = {}) {
     const headers = { 'content-type': 'application/json' }; if (token) headers.authorization = `Bearer ${token}`;
@@ -1395,27 +1342,26 @@ window.DRUG_DATA = {
     return data;
   }
 
-  // ── 狀態 ────────────────────────────────────────────────────────
   const emptyUpload = () => ({ loaded: false, recognized: false, file: null, preview: '', search: '', results: [] });
   const state = {
-    page: 'form', param: null, stage: 'intake', // stage: intake（調查表→辨識→確認）| home（已建檔）
+    page: 'form', param: null, stage: 'intake',
     profile: JSON.parse(JSON.stringify(D.profile)),
-    drugs: [],            // [{ licenseNo, drug, kid, tags, followups, quiz, usage, source, addedAt }]
-    chunks: {},           // 新增藥品帶回來的仿單段落；預載的在 window.DRUG_DATA.chunks
-    interactions: [],     // 兩兩比對結果（預載 + 生成）
-    plainConfirmed: {},   // lic -> 按過「我都確認了」
+    drugs: [],
+    chunks: {},
+    interactions: [],
+    plainConfirmed: {},
     interactionsConfirmed: false, visitedInteractions: false,
     confirm: {}, editing: null,
-    plain: {},            // lic -> { checks: {key: bool}, followups: {id: 'yes'|'no'|null} }
+    plain: {},
     interactionsChecked: {},
-    quiz: { answers: {}, submitted: false, passed: false }, // answers 以題目 id 為鍵
+    quiz: { answers: {}, submitted: false, passed: false },
     doses: [], prnLogs: {}, slotOverrides: {},
     cabinet: D.cabinet.map((c) => ({ ...c, disposed: false })),
     care: { notify: true, notified: false, account: null, invite: null, relationships: [], lastSync: null },
     caregiver: { account: null, relationships: [], selected: null, snapshot: null, error: '' },
     qa: { sessions: [], current: null, seq: 0 },
     upload: emptyUpload(),
-    add: null,            // 新增藥品流程：{ items: [...], prescription, progress }
+    add: null,
     speech: { rate: 1, speaking: false },
   };
   const entryOf = (lic) => state.drugs.find((e) => e.licenseNo === lic);
@@ -1425,7 +1371,6 @@ window.DRUG_DATA = {
   const usageOf = (lic) => (entryOf(lic) || {}).usage || {};
   const usageLine = (lic) => { const u = usageOf(lic); return u.dose ? `一次 ${u.dose}，${u.freq}${u.timing ? '，' + u.timing : ''}${u.note ? '，' + u.note : ''}` : ''; };
 
-  // 預載：三款藥 + 三組交互作用 + 題目
   const withIds = () => D.quiz.map((q, i) => ({ ...q, id: `${q.drug}:${i}` }));
   function preloadEntries() {
     return window.DRUG_DATA.drugs.map((drug) => {
@@ -1444,29 +1389,26 @@ window.DRUG_DATA = {
   function initDemo() {
     state.drugs = preloadEntries(); state.interactions = preloadInteractions();
     state.drugs.forEach((e) => { state.confirm[e.licenseNo] = true; });
-    quizItems().forEach((q) => { state.quiz.answers[q.id] = q.answer; }); // 預載題目預先選好正確答案
+    quizItems().forEach((q) => { state.quiz.answers[q.id] = q.answer; });
     D.qaHistory.forEach((h) => { const s = { id: 's' + (++state.qa.seq), title: h.qs[0], date: h.date, messages: [] }; h.qs.forEach((q) => { s.messages.push({ role: 'user', text: q }); s.messages.push({ role: 'bot', ...ruleAnswer(q) }); }); state.qa.sessions.push(s); });
   }
 
-  // ── 持久化（重新整理不會消失；「更多功能 → 重設示範資料」清掉）──
   const PERSIST = ['stage', 'profile', 'drugs', 'chunks', 'interactions', 'plainConfirmed', 'interactionsConfirmed', 'visitedInteractions', 'confirm', 'plain', 'interactionsChecked', 'quiz', 'doses', 'prnLogs', 'slotOverrides', 'cabinet', 'care', 'qa'];
-  const CG_KEY = 'yzt-caregiver-v1'; // 照護者模式另存一把，同一個瀏覽器開兩個分頁才不會互相覆蓋
-  function save() { try { const o = {}; PERSIST.forEach((k) => { o[k] = state[k]; }); localStorage.setItem(STORE_KEY, JSON.stringify(o)); localStorage.setItem(CG_KEY, JSON.stringify({ account: state.caregiver.account, selected: state.caregiver.selected })); } catch (e) { /* 存不了就算了 */ } }
+  const CG_KEY = 'yzt-caregiver-v1';
+  function save() { try { const o = {}; PERSIST.forEach((k) => { o[k] = state[k]; }); localStorage.setItem(STORE_KEY, JSON.stringify(o)); localStorage.setItem(CG_KEY, JSON.stringify({ account: state.caregiver.account, selected: state.caregiver.selected })); } catch (e) { } }
   function load() {
-    try { const cg = JSON.parse(localStorage.getItem(CG_KEY) || 'null'); if (cg && cg.account) { state.caregiver.account = cg.account; state.caregiver.selected = cg.selected || null; } } catch (e) { /* 忽略 */ }
+    try { const cg = JSON.parse(localStorage.getItem(CG_KEY) || 'null'); if (cg && cg.account) { state.caregiver.account = cg.account; state.caregiver.selected = cg.selected || null; } } catch (e) { }
     try { const raw = localStorage.getItem(STORE_KEY); if (!raw) return false; const o = JSON.parse(raw); if (!o || !Array.isArray(o.drugs) || !o.drugs.length) return false; PERSIST.forEach((k) => { if (o[k] !== undefined) state[k] = o[k]; }); return true; } catch (e) { return false; }
   }
-  // #12 重設也把雲端的照護帳號刪掉，不留孤兒資料
   async function resetDemo() {
-    try { if (state.care.account) await careCall('owner', '/v1/account', { method: 'DELETE' }); } catch (e) { /* 已失效也算 */ }
-    try { if (state.caregiver.account) await careCall('caregiver', '/v1/account', { method: 'DELETE' }); } catch (e) { /* 同上 */ }
-    try { localStorage.removeItem(STORE_KEY); localStorage.removeItem(CG_KEY); } catch (e) { /* 忽略 */ }
+    try { if (state.care.account) await careCall('owner', '/v1/account', { method: 'DELETE' }); } catch (e) { }
+    try { if (state.caregiver.account) await careCall('caregiver', '/v1/account', { method: 'DELETE' }); } catch (e) { }
+    try { localStorage.removeItem(STORE_KEY); localStorage.removeItem(CG_KEY); } catch (e) { }
     location.hash = ''; location.reload();
   }
 
   const pages = {};
 
-  // ── 1. 健康調查表 ───────────────────────────────────────────────
   pages.form = {
     render() {
       const p = state.profile;
@@ -1559,7 +1501,6 @@ window.DRUG_DATA = {
       </form>
       ${state.stage === 'intake' ? `<p class="caregiver-entry"><button class="btn btn-text" type="button" id="to-caregiver">我是照護者，有家人給我的邀請碼 ›</button></p>` : ''}`;
     },
-    // 把表單讀回 profile，回傳缺漏清單
     collect() {
       const f = $('#health-form'); if (!f) return [];
       const fd = new FormData(f);
@@ -1582,7 +1523,7 @@ window.DRUG_DATA = {
       p.familyOtherName = (fd.get('familyOtherName') || '').trim();
       if (fd.get('family_other') && !p.familyOtherName) errors.push('家族病史「其他」的疾病名稱');
       ['cancer', 'stroke', 'diabetes', 'hypertension', 'heart', 'mental', 'other'].forEach((k) => { p.familyItems[k] = fd.get('family_' + k) ? ($$('.multi-select[data-name="familyWho_' + k + '"] input:checked', f).map((c) => c.value).join('、') || '有') : ''; });
-      p.otcMeds = fd.get('otcMeds') || null; // 選填
+      p.otcMeds = fd.get('otcMeds') || null;
       p.otcMedsDetail = fd.get('otcMedsDetail') || '';
       ['smoking', 'alcohol', 'betel', 'exercise', 'sleep', 'diet', 'mental'].forEach((k) => { p[k] = fd.get(k); if (!p[k]) errors.push({ smoking: '抽菸習慣', alcohol: '飲酒習慣', betel: '嚼檳榔習慣', exercise: '運動習慣', sleep: '睡眠品質', diet: '飲食偏好', mental: '心理與壓力狀態' }[k]); });
       p.exposure = fd.getAll('exposure'); if (!p.exposure.length) errors.push('環境暴露（沒有就勾「無」）');
@@ -1603,7 +1544,6 @@ window.DRUG_DATA = {
     bind() {
       const f = $('#health-form');
       f.addEventListener('change', (e) => {
-        // 「無」和其他選項互斥：勾了無就清掉其他；勾了其他就清掉無
         const t = e.target; if (t && t.type === 'checkbox' && ['chronic', 'exposure', 'symptoms'].includes(t.name) && t.checked) { $$(`[name="${t.name}"]`, f).forEach((c) => { if (c !== t && ((t.value === 'none') || c.value === 'none')) c.checked = false; }); }
         updateAction();
       });
@@ -1631,8 +1571,6 @@ window.DRUG_DATA = {
       p.sex === 'female' ? `女性：${{ na: '不適用', pregnant: '懷孕中', trying: '備孕中', lactating: '哺乳中', menopause: '已停經' }[p.female] || '未填'}` : ''].filter(Boolean).join('\n');
   }
 
-  // ── 2. 上傳藥袋 ─────────────────────────────────────────────────
-  // 兩種模式：第一次（intake）用範例藥袋走示範；建檔之後（add）可以上傳真的藥袋、或用藥名搜尋。
   const addMode = () => state.stage === 'home';
   pages.upload = {
     render() {
@@ -1699,7 +1637,6 @@ window.DRUG_DATA = {
         toast('辨識完成，共讀到 3 筆藥品。');
         return true;
       }
-      // 真的辨識
       if (!state.upload.file) return false;
       setFoot('3/3', true); $('#recog-status').textContent = '辨識中，大約需要 10 到 20 秒⋯⋯'; $('.progress').hidden = false;
       const t0 = performance.now(); let alive = true;
@@ -1747,7 +1684,6 @@ window.DRUG_DATA = {
     });
   }
 
-  // ── 3. 確認藥品 ─────────────────────────────────────────────────
   const FREQ_OPTIONS = ['一天一次', '一天兩次', '一天三次', '一天四次', '需要時服用'];
   const ROUTE_OPTIONS = ['口服', '外用', '塗抹於皮膚', '吸入', '噴鼻子', '點眼睛', '點耳朵', '塞劑', '注射'];
   const DOSE_UNITS = ['錠', '顆', '膠囊', '包', '毫升', '滴', '匙', '噴', '片', '支'];
@@ -1841,7 +1777,6 @@ window.DRUG_DATA = {
       const rem = state.drugs.filter((e) => !state.confirm[e.licenseNo]).length; return rem ? { ok: false, note: `還有 ${rem} 筆沒有確認` } : { ok: true, note: '' };
     },
   };
-  // 新增模式：辨識結果 → 選對應的許可證 → 填吃法 → 建檔（真的去拿仿單與生成說明）
   function renderAddConfirm() {
     const a = state.add; if (!a || !a.items.length) return `<h1 class="page-title">請確認藥品資訊</h1><p class="honest">沒有要新增的藥品。</p>`;
     const remaining = a.items.filter((i) => !i.ok).length;
@@ -1907,7 +1842,6 @@ window.DRUG_DATA = {
       catch (e) { state.interactions.push({ a: x, b: y, severity: 'none', source: 'ai', title: '暫時無法比對', summary: '比對服務沒有回應：' + e.message, action: '請稍後再試，或直接詢問藥師。', evidence: [], aiNote: '', quiz: null, failed: true }); }
     }));
     setStep('ix', 'done');
-    // 衍生內容重來：新藥的說明未確認、交互作用未確認、測驗要重考、提醒重排
     state.interactionsConfirmed = false; state.interactionsChecked = {};
     quizItems().forEach((q) => { if (!(q.id in state.quiz.answers)) state.quiz.answers[q.id] = null; });
     state.quiz.submitted = false; state.quiz.passed = false;
@@ -1919,7 +1853,6 @@ window.DRUG_DATA = {
     navigate('home');
   }
 
-  // ── 4. 講白話（每款藥一頁） ─────────────────────────────────────
   function plainState(lic) {
     if (!state.plain[lic]) {
       const e = entryOf(lic); const checks = {};
@@ -2024,8 +1957,6 @@ window.DRUG_DATA = {
     },
   };
 
-  // ── 6. 交互作用 ─────────────────────────────────────────────────
-  // 依目前的藥與調查表即時算：成分重複（含家庭藥箱）、飲酒相關的藥
   function crossNotes() {
     const notes = [];
     const ing = (e) => (e.drug.ingredients || []).map((x) => String(x).toLowerCase().replace(/\s*\(.*$/, '').trim()).filter(Boolean);
@@ -2073,7 +2004,6 @@ window.DRUG_DATA = {
     },
   };
 
-  // ── 7. 小測驗 ───────────────────────────────────────────────────
   pages.quiz = {
     render() {
       const q = state.quiz; const items = quizItems();
@@ -2096,11 +2026,9 @@ window.DRUG_DATA = {
     gate() { const q = state.quiz; const un = quizItems().filter((it) => q.answers[it.id] === null || q.answers[it.id] === undefined).length; if (un) return { ok: false, note: `還有 ${un} 題沒有作答` }; if (!q.submitted) return { ok: true, note: '' }; return q.passed ? { ok: true, note: '' } : { ok: false, note: '有題目答錯，改正後再送出' }; },
   };
 
-  // ── 8. 提醒排程與更改時間 ─────────────────────────────────────────
   function scheduleFor(e) {
     const lic = e.licenseNo; const pre = D.schedule.find((s) => s.licenseNo === lic); const u = e.usage || {};
     if (u.freq === '需要時服用') return { licenseNo: lic, slots: [], prn: true, note: `需要時服用${u.note ? '，' + u.note : ''}` };
-    // 預載的排程只在吃法沒被改過時沿用；改了頻次或飯前飯後就重算
     const orig = [...D.recognition.items, ...D.recognition.fromForm].find((i) => i.licenseNo === lic);
     const usageChanged = !orig || orig.freq !== u.freq || (orig.timing || '') !== (u.timing || '');
     const usePre = pre && !pre.prn && !e.addedAt && !usageChanged && !state.slotOverrides[lic];
@@ -2177,10 +2105,9 @@ window.DRUG_DATA = {
       <div class="dose-actions"><button class="btn btn-small btn-primary" data-act="taken">已服用</button><button class="btn btn-small" data-act="snoozed">延後</button><button class="btn btn-small" data-act="skipped">略過</button></div>`;
     $$('[data-act]', el).forEach((b) => b.addEventListener('click', () => applyDose(i, b.dataset.act)));
     document.body.appendChild(el);
-    if ('Notification' in window && Notification.permission === 'granted') { try { new Notification('藥智通：' + shortName(d.licenseNo), { body: dose + '，' + d.note }); } catch (e) { /* 忽略 */ } }
+    if ('Notification' in window && Notification.permission === 'granted') { try { new Notification('藥智通：' + shortName(d.licenseNo), { body: dose + '，' + d.note }); } catch (e) { } }
   }
 
-  // ── 9. 服藥紀錄 ─────────────────────────────────────────────────
   function weekLogs() {
     const w = D.weekLogs; const rows = w.rows.filter((r) => entryOf(r.licenseNo)).map((r) => ({ ...r }));
     state.drugs.filter((e) => e.addedAt && !scheduleFor(e).prn).forEach((e) => { rows.push({ licenseNo: e.licenseNo, time: scheduleFor(e).slots[0], cells: ['-', '-', '-', '-', '-', '-', 'p'], fresh: true }); });
@@ -2217,7 +2144,6 @@ window.DRUG_DATA = {
     },
   };
 
-  // ── 10. 家庭藥箱 ────────────────────────────────────────────────
   pages.cabinet = {
     render() {
       const items = state.cabinet.filter((c) => !c.disposed).sort((a, b) => a.expiry.localeCompare(b.expiry));
@@ -2248,8 +2174,6 @@ window.DRUG_DATA = {
     },
   };
 
-  // ── 11. 家人照護（真的：帳號、邀請碼、照護關係走 care-service）───────
-  // 帳號是為了同步而自動建立的，使用者不需要輸入帳密；電子郵件是隨機產生的識別，不寄信。
   const randId = () => (typeof crypto !== 'undefined' && crypto.randomUUID ? crypto.randomUUID() : String(Date.now()) + Math.random().toString(16).slice(2));
   async function careCall(who, path, opts = {}) {
     const box = who === 'owner' ? state.care : state.caregiver;
@@ -2332,14 +2256,12 @@ window.DRUG_DATA = {
       });
       const sn = $('#sync-now'); if (sn) sn.addEventListener('click', () => { $('#sync-status').textContent = '同步中…'; pushSnapshot(); });
       $('#notify-toggle').addEventListener('change', (e) => { state.care.notify = e.target.checked; save(); });
-      $('#simulate-miss').addEventListener('click', async () => { if (!state.care.notify) { toast('通知已關閉，不會送出。'); return; } state.care.notified = true; if (state.care.account) { try { await careCall('owner', '/v1/notifications/missed-dose', { method: 'POST', body: {} }); } catch (e) { /* 示意 */ } } save(); renderPage(); });
-      const off = $('#care-off'); if (off) off.addEventListener('click', async () => { if (!window.confirm('停用後家人會立刻看不到您的資料，雲端上的快照也會刪除。確定嗎？')) return; try { await careCall('owner', '/v1/account', { method: 'DELETE' }); } catch (e) { /* 已失效也算 */ } state.care.account = null; state.care.invite = null; state.care.relationships = []; state.care.lastSync = null; save(); toast('已停用家人照護。'); renderPage(); });
-      // 只在關係真的有變時重畫，否則 bind → 重畫 → bind 會無限循環
+      $('#simulate-miss').addEventListener('click', async () => { if (!state.care.notify) { toast('通知已關閉，不會送出。'); return; } state.care.notified = true; if (state.care.account) { try { await careCall('owner', '/v1/notifications/missed-dose', { method: 'POST', body: {} }); } catch (e) { } } save(); renderPage(); });
+      const off = $('#care-off'); if (off) off.addEventListener('click', async () => { if (!window.confirm('停用後家人會立刻看不到您的資料，雲端上的快照也會刪除。確定嗎？')) return; try { await careCall('owner', '/v1/account', { method: 'DELETE' }); } catch (e) { } state.care.account = null; state.care.invite = null; state.care.relationships = []; state.care.lastSync = null; save(); toast('已停用家人照護。'); renderPage(); });
       if (state.care.account) refreshRelationships().then((changed) => { if (changed && state.page === 'care') renderPage(); });
     },
   };
 
-  // ── 11b. 照護者模式（另一支手機）：輸入邀請碼，看家人的藥 ──────────
   let cgTimer = null;
   async function caregiverRefresh() {
     const cg = state.caregiver; if (!cg.account) return;
@@ -2399,7 +2321,6 @@ window.DRUG_DATA = {
     },
   };
 
-  // ── 12. 用藥問答（真 AI；沒有伺服器時退回關鍵字規則）─────────────
   function qaCurrent() { return state.qa.sessions.find((s) => s.id === state.qa.current); }
   function qaNewSession() { const s = { id: 's' + (++state.qa.seq), title: '', date: '今天 ' + nowHM(), messages: [] }; state.qa.sessions.unshift(s); state.qa.current = s.id; return s; }
   pages.qa = {
@@ -2481,7 +2402,6 @@ window.DRUG_DATA = {
     s.messages.pop(); s.messages.push({ role: 'bot', ...a }); save(); paint();
   }
 
-  // ── 首頁：藥品清單（建檔後的起點，跟 App 的首頁一樣） ────────────
   function drugStatus(lic) { if (state.plainConfirmed[lic]) return { done: true, label: '已確認' }; if (!state.plain[lic]) return { done: false, label: '還沒看說明' }; const g = pages.plain.gate({ lic }); return { done: false, label: g.ok ? '還沒按確認' : g.note }; }
   function allDrugsDone() { return state.drugs.every((e) => drugStatus(e.licenseNo).done); }
   function interactionsDone() { return state.interactionsConfirmed; }
@@ -2532,14 +2452,12 @@ window.DRUG_DATA = {
     state.interactionsChecked = {}; state.quiz.submitted = false; state.quiz.passed = false;
     save(); pushSnapshot(); toast('已移除。'); renderPage();
   }
-  // 改吃法（建檔後）：改完會影響提醒與問答；說明要重新確認
   pages.usage = {
     render(step) { const e = entryOf(step.lic); if (!e) return '<p class="honest">找不到這款藥。</p>'; return `<h1 class="page-title">改吃法：${esc(shortName(step.lic))}</h1><p class="page-lead">改了之後，提醒時間與問答都會用新的吃法。</p><div class="med-card is-editing" data-lic="${e.licenseNo}">${usageFields(e.usage)}</div>`; },
     bind() { bindMultiSel(document); },
     gate() { return entryOf(state.param) ? { ok: true, note: '' } : { ok: false, note: '' }; },
   };
 
-  // ── 仿單原文抽屜 ──────────────────────────────────────────────────
   function openCitations(lic, ids) {
     closeDrawer();
     const d = drugOf(lic); if (!d) return;
@@ -2556,7 +2474,6 @@ window.DRUG_DATA = {
   function escClose(e) { if (e.key === 'Escape') closeDrawer(); }
   function closeDrawer() { ['#drawer', '#drawer-backdrop'].forEach((s) => { const el = $(s); if (el) el.remove(); }); document.removeEventListener('keydown', escClose); }
 
-  // ── 朗讀（Web Speech API） ────────────────────────────────────────
   function bindSpeech() {
     const toggle = $('#tts-toggle'), stop = $('#tts-stop'), rate = $('#tts-rate');
     if (!('speechSynthesis' in window)) { toggle.disabled = true; toggle.textContent = '這個瀏覽器無法朗讀'; return; }
@@ -2575,8 +2492,6 @@ window.DRUG_DATA = {
     stop.addEventListener('click', () => { window.speechSynthesis.cancel(); if (pages.plain._finish) pages.plain._finish(); });
   }
 
-  // ── 共用：導覽、底部動作列、提示 ─────────────────────────────────
-  // 每一頁自己決定底部那顆主按鈕叫什麼、按了做什麼；沒有列在這裡的頁面不顯示動作列。
   const ACTIONS = {
     form: { label: () => (state.stage === 'home' ? '儲存調查表' : '送出調查表'), run: () => { if (state.stage === 'home') { save(); toast('調查表已更新，說明與問答會依新的資料調整。'); navigate('home'); } else navigate('upload'); } },
     upload: { label: () => (!addMode() && state.upload.recognized ? '看辨識結果' : '開始辨識'), run: async () => { const ok = await pages.upload.beforeNext(); if (ok) navigate('confirm'); } },
@@ -2612,7 +2527,6 @@ window.DRUG_DATA = {
     if (page.bind) page.bind(step);
     if (act) $('#action-btn').addEventListener('click', runAction);
     if (showBack) $('#back').addEventListener('click', goBack);
-    // 頂欄只有字級與「更多功能」；送出調查表後就出現（照護者模式不顯示）
     $('#menu-btn').hidden = (state.page === 'form' && state.stage !== 'home') || state.page === 'caregiver';
     document.title = (PAGE_TITLE[state.page] || '藥智通') + ' · 藥智通';
     updateAction(); save();
@@ -2626,7 +2540,6 @@ window.DRUG_DATA = {
   function setFoot(text, disabled) { const n = $('#action-note'); if (n) n.textContent = text; const b = $('#action-btn'); if (b) b.disabled = disabled; }
   async function runAction() { const act = ACTIONS[state.page]; if (!act) return; $('#action-btn').disabled = true; await act.run(); updateAction(); }
 
-  // 更多功能選單（跟 App 一樣：文字標籤，不是一排圖示）
   function openMenu() { $('#menu').hidden = false; $('#menu-btn').setAttribute('aria-expanded', 'true'); }
   function closeMenu() { const m = $('#menu'); if (m) { m.hidden = true; $('#menu-btn').setAttribute('aria-expanded', 'false'); } }
 
@@ -2636,21 +2549,18 @@ window.DRUG_DATA = {
   const nowHM = () => new Date().toTimeString().slice(0, 5);
   const localTime = (iso) => { const d = new Date(iso); return Number.isNaN(d.getTime()) ? '' : `${d.getMonth() + 1}/${d.getDate()} ${pad2(d.getHours())}:${pad2(d.getMinutes())}`; };
 
-  // 字級
-  function setScale(s) { document.body.dataset.scale = s; $$('.scale-switch button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.scale === s)); try { localStorage.setItem('scale', s); } catch (e) { /* 忽略 */ } }
+  function setScale(s) { document.body.dataset.scale = s; $$('.scale-switch button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.scale === s)); try { localStorage.setItem('scale', s); } catch (e) { } }
 
-  // ── 啟動 ─────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', async () => {
     $('#menu-btn').addEventListener('click', () => ($('#menu').hidden ? openMenu() : closeMenu()));
     $$('#menu [data-nav]').forEach((b) => b.addEventListener('click', () => { closeMenu(); navigate(b.dataset.nav); }));
     const rs = $('#menu [data-reset]'); if (rs) rs.addEventListener('click', () => { closeMenu(); if (window.confirm('會清掉新增的藥品、打卡、對話與照護設定，回到示範的起點。確定嗎？')) resetDemo(); });
     document.addEventListener('click', (e) => { if (!e.target.closest('#menu') && !e.target.closest('#menu-btn')) closeMenu(); });
     $$('.scale-switch button').forEach((b) => b.addEventListener('click', () => setScale(b.dataset.scale)));
-    let saved = 'normal'; try { saved = localStorage.getItem('scale') || 'normal'; } catch (e) { /* 忽略 */ }
+    let saved = 'normal'; try { saved = localStorage.getItem('scale') || 'normal'; } catch (e) { }
     setScale(saved);
-    try { Object.assign(cfg, await api('/api/config'), { online: true }); } catch (e) { /* 純靜態，沒有伺服器 */ }
+    try { Object.assign(cfg, await api('/api/config'), { online: true }); } catch (e) { }
     if (!load()) initDemo();
-    // 排練用：#page=home 直接跳到建檔後的首頁；#page=caregiver 是另一支手機的入口
     const m = location.hash.match(/page=([a-z]+)/);
     if (m && pages[m[1]]) { state.page = m[1]; if (!['form', 'upload', 'confirm', 'caregiver'].includes(m[1])) { state.stage = 'home'; state.upload = { ...state.upload, loaded: true, recognized: true }; } if (m[1] === 'plain') state.param = state.drugs[0].licenseNo; }
     else if (state.stage === 'home') state.page = 'home';
