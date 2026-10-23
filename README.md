@@ -8,7 +8,7 @@
 
 > ⚠️ 本作品為示範，非醫療器材、非醫療服務，內容僅供衛教參考，不能取代醫師或藥師的專業判斷。
 
-![首頁](screenshots/home.png)
+![今天要吃的藥](screenshots/6-home-today.png)
 
 ---
 
@@ -70,6 +70,14 @@
 **每一輪我下了什麼指令、AI 改了什麼，整理在 [DEVLOG.md](DEVLOG.md)**（9/4～9/6 60 多則指令、37 個 commit，共 6 輪）。
 
 完整的測試紀錄（每個問題怎麼發現、怎麼處理）見 [TEST-FINDINGS.md](https://github.com/Sean-Fang178/yaozhitong-web-demo/blob/main/docs/TEST-FINDINGS.md)。
+
+## 畫面截圖
+
+| | |
+| --- | --- |
+| 健康調查表 ![](screenshots/1-form.png) | 藥袋辨識結果確認 ![](screenshots/2-confirm.png) |
+| 白話說明（螢光重點） ![](screenshots/3-drug.png) | 交互作用比對 ![](screenshots/4-interactions.png) |
+| 小測驗（答錯標紅並解釋） ![](screenshots/5-quiz-wrong.png) | 用藥問答 ![](screenshots/7-qa.png) |
 
 ## 授權
 
